@@ -6,11 +6,7 @@ Use in conjunction with something like Rambda's [pipe](http://ramdajs.com/docs/#
 
 <br/>
 
-### What is a higher-order component?
-
-A higher order component is a function that
-- takes a React Component
-- returns a React Component
+**UPDATE**: didn't know [recompose](https://github.com/acdlite/recompose) was a thing :)
 
 <br/>
 
@@ -31,6 +27,6 @@ Postcomposes your component with an element transformation.
 
 <br/>
 
-### Food for thought: The Component profunctor...
+### Food for thought: The Component profunctor?
 If you were a keen [Haskeller](https://hackage.haskell.org/package/profunctors-5.2/docs/Data-Profunctor.html),
-you would've noticed that `mapProps` looks like an `lmap`, and `mapElement` looks like an `rmap` ;)
+you would've noticed that `mapProps` looks like an `lmap`, and `mapElement` looks like an `rmap`
