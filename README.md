@@ -1,12 +1,8 @@
 # react-hocs
 
-Tiny higher-order component utility library.
+Minimum viable higher-order component utility library.
 
-Use in conjunction with something like Rambda's [pipe](http://ramdajs.com/docs/#pipe) or Lodash's [flow](https://lodash.com/docs/4.17.2#flow).
-
-<br/>
-
-**UPDATE**: didn't know [recompose](https://github.com/acdlite/recompose) was a thing :)
+Use in conjunction with something like Rambda's [pipe](http://ramdajs.com/docs/#pipe) or Lodash's [flow](https://lodash.com/docs/4.17.2#flow). Or just use [recompose](https://github.com/acdlite/recompose) :)
 
 <br/>
 
@@ -17,12 +13,18 @@ Let's pretend that a React Component is just a function from `props` to `element
 <br/>
 
 #### `mapProps : (props₁ → props₂) → (props₂ → element) → (props₁ → element)`
+```js
+const mapProps = (f) => (component) => (props) => createElement(component, f(props));
+```
 Precomposes your component with a props transformation.
 
 
 <br/>
 
 #### `mapElement : (element₁ → element₂) → (props → element₁) → (props → element₂)`
+```js
+const mapElement = (f) => (component) => (props) => f(createElement(component, props));
+```
 Postcomposes your component with an element transformation.
 
 <br/>
