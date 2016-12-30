@@ -12,6 +12,7 @@ Let's notate a React Component with a Unicode fat arrow: `props ⇒ element`
 
 <br/>
 
+#### mapProps
 ```js
 // mapProps : (props₁ → props₂) → (props₂ ⇒ element) → (props₁ ⇒ element)
 const mapProps = (f) => (component) => (props) => createElement(component, f(props));
@@ -21,6 +22,7 @@ Precomposes your component with a props transformation.
 
 <br/>
 
+#### mapElement
 ```js
 // mapElement : (element₁ → element₂) → (props ⇒ element₁) → (props ⇒ element₂)
 const mapElement = (f) => (component) => (props) => f(createElement(component, props));
